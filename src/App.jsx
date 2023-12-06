@@ -3,13 +3,14 @@ import "./style/App.css";
 import { CharacterCard } from "./Component/CharacterCard.";
 import { CharacterRatings } from "./Component/CharacterRatings";
 import { HeaderClass } from "./Component/HeaderClass";
+import { characterData } from "./data/characterData";
 
 function App() {
   return (
     <>
       <HeaderClass />
-      <CharacterRatings />
-      <CharacterCard />
+      <CharacterRatings characters={characterData} />
+      <CharacterCard characters={characterData} />
     </>
   );
 }
