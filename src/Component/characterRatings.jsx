@@ -1,5 +1,4 @@
 import { Component } from "react";
-import { characterData } from "../data/characterData";
 import { sortCharacterCard } from "../data/characterData";
 import "../style/characterRatings.css";
 
@@ -17,7 +16,8 @@ export class CharacterRatings extends Component {
             </tr>
           </thead>
           <tbody>
-            {characterData
+            {this.props.characters
+              .slice()
               .sort(sortCharacterCard)
               .slice(0, 5)
               .map((character, index) => (
